@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<style>
+			.mui-control-content {
+				min-height: 600px;
+				background: gainsboro;
+			}
+			
+			.mui-control-content .mui-loading {
+				margin-top: 50px;
+			}
+			
+			.mui-slider-group {
+				position: relative;
+			}
+			
+			.mui-slider-item {
+				position: absolute;
+			}
+			
+			.mui-h4 {
+				position: absolute;
+				bottom: 10px;
+				color: white;
+				padding-left: 10px;
+				font-weight: 400;
+			}
+			
+			.text {
+				color: black;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="mui-card" style="margin-top: 1%;">
+			<div class="mui-card-header">
+				<div class="mui-slider">
+					<div class="mui-pull-right"><span class="mui-icon iconfont icon-tuichu1"></span></div>
+					<p>查看我的关注</p>
+					<div class="mui-row" style="margin-top: 5%;">
+						
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="mui-card" style="margin-top: 1%;">
+			<div class="mui-card-header mui-card-media" style="position: static;">
+				<img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3575136827,2403918790&fm=26&gp=0.jpg" / style="width: 37px;">
+				<div class="mui-pull-right">
+					<button type="button" class="mui-btn" >已关注</button>
+				</div>
+				<div class="mui-media-body">
+					小M
+					<p>发表于 2016-06-30 15:30</p>
+				</div>
+			</div>
+			
+		</div>
+
+
+
+
+<button id='confirmBtn' type="button" class="mui-btn mui-btn-blue mui-btn-outlined">确认消息框</button>
+
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="js/mui.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="js/mui.view.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+<script>
+	var info = document.getElementById("info");
+document.getElementById("dengluout").addEventListener('tap', function() {
+    var btnArray = ['取消', '退出'];
+    mui.confirm('是否退出登录', 'Hello MUI', btnArray, function(e) {
+        if (e.index == 1) {
+          location.reload();
+        } else {
+            return true;
+        }
+    })
+});
+
+</script>
+
+
+
+	</body>
+
+</html>
